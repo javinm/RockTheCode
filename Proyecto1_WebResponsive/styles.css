@@ -33,6 +33,10 @@ header {
     justify-content: flex-start;
 }
 
+.header-upper {
+    max-height: 80px
+}
+
 .header-upper, .header-lower {
     display: flex;
     justify-content: space-between;
@@ -56,8 +60,8 @@ header {
 }
 
 .logo{
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
 }
 
 .logo img{
@@ -78,6 +82,8 @@ header {
 
 .container-search-bar .categories{
     font-weight: 300;
+    width: 70%;
+    max-width: 217px;
 }
 
 .container-search-bar .categories span:last-child{
@@ -86,20 +92,22 @@ header {
 
 .searchBar {
     position: relative;
+    width: 100%;
     border-left: 1px solid rgba(0, 0, 0, 0.3);
 
 }
 
 .searchBar svg{
     position: absolute;
-    left: 80%;
-    top: 15%;
+    left: 87%;
+    top: 20%;
 }
 
 .searchBar input{
     width: 100%;
     padding: 10px;
-    border: none
+    border: none;
+    font-size: 17px
 }
 
 .navbar {
@@ -130,6 +138,8 @@ header {
 
 .header-lower {
     padding: 10px 5px;
+    font-size: 14px;
+    max-height: 45px;
 }
 
 .categories{
@@ -156,6 +166,11 @@ header {
 }
 
 .header-lower-mobile{
+    display: none;
+    margin-bottom: 10px
+}
+
+.text-mobile {
     display: none;
 }
 
@@ -240,20 +255,14 @@ header {
         left: 93%;
     }
 
-    .categories{
-        width: 30%;
-        max-width: 217px;
-        font-weight: 300;
-        flex-shrink: 0;
-    }
-
     .categories span:first-child{
         display: none;
     }
 
-    .categories span:last-child{
+    .text-mobile{
         display: block;
     }
+    
 }
  
 
