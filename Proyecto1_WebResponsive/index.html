@@ -7,10 +7,58 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="shortcut icon" href="https://cdn.pccomponentes.com/img/favicons/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https.//fonts.googleapis.com">
-    <link rel="preload" href="https://cdn.pccomponentes.com/prod/v1/fonts/open-sans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <script src="https://unpkg.com/feather-icons"></script>
     <title>My PCComponentes</title>
 </head>
 <body>
+    <header>
+        <div class="header-upper">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://cdn.pccomponentes.com/img/logos/logo-pccomponentes.svg" alt="logo">
+                </a>
+            </div> 
+            <div class="container-search-bar">
+                
+            </div> 
+            <ul class="navbar">
+                <li class="item item1">
+                    <div>
+                        <a href="#">
+                            <i data-feather="package"></i>
+                            <span>Compromiso</span>
+                        </a>
+                    </div>    
+                </li>
+                <li class="item item2">
+                    <div>
+                        <a href="#">
+                            <i data-feather="user"></i>
+                            <span>Mi cuenta</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="item item3">
+                    <div>
+                        <a href="#">
+                            <i data-feather="shopping-cart"></i>
+                            <span>Mi cesta</span>
+                        </a>
+                    </div>
+                </li>
+            </ul> 
+        </div>    
+        <div class="header-lower">
+            <div>
+                <i data-feather="menu"></i> 
+                <span> Todas las categorías</span>
+            </div>
+            <span>Outlet Week</span>    
+        </div> 
+    </header>
     
 </body>
+<script>
+    feather.replace();
+</script>
 </html>
