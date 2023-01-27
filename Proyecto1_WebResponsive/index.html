@@ -13,13 +13,23 @@
 <body>
     <header>
         <div class="header-upper">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="https://cdn.pccomponentes.com/img/logos/logo-pccomponentes.svg" alt="logo">
-                </a>
-            </div> 
+            <div class="logo-container">
+                <i data-feather="menu"></i>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://cdn.pccomponentes.com/img/logos/logo-pccomponentes.svg" alt="logo">
+                    </a>
+                </div> 
+            </div>
             <div class="container-search-bar">
-                
+                <div class="categories">
+                    <span> Todas las categorías</span>
+                    <i data-feather="chevron-down"></i>
+                </div>    
+                <div class="searchBar">
+                    <i data-feather="search"></i>
+                    <input type="text" placeholder="Buscar">
+                </div>
             </div> 
             <ul class="navbar">
                 <li class="item item1">
@@ -49,12 +59,23 @@
             </ul> 
         </div>    
         <div class="header-lower">
-            <div>
+            <div class="categories">
                 <i data-feather="menu"></i> 
                 <span> Todas las categorías</span>
             </div>
             <span>Outlet Week</span>    
         </div> 
+        <div class="header-lower-mobile">
+            <div class="categories">
+                <span> Todas las categorías</span>
+                <span>Todas...</span>
+                <i data-feather="chevron-down"></i>
+            </div>    
+            <div class="searchBar">
+                <i data-feather="search"></i>
+                <input type="text" placeholder="Buscar">
+            </div>
+        </div>
     </header>
     
 </body>

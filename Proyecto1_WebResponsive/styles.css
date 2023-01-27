@@ -23,6 +23,7 @@ ul {
 }
 
 header {
+    background-color: #fff;
     padding: 0 10px 0 20px;
     width: 100%;
     position: fixed;
@@ -42,6 +43,18 @@ header {
     width: 100%;
 }
 
+.logo-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.logo-container > svg {
+    display: none;
+}
+
 .logo{
     width: 100px;
     height: 100px;
@@ -53,12 +66,47 @@ header {
     object-fit: scale-down;
 }
 
+.container-search-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 7px;
+    height: 45px;
+    width: 45%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.container-search-bar .categories{
+    font-weight: 300;
+}
+
+.container-search-bar .categories span:last-child{
+    display: none;
+}
+
+.searchBar {
+    position: relative;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+
+}
+
+.searchBar svg{
+    position: absolute;
+    left: 80%;
+    top: 15%;
+}
+
+.searchBar input{
+    width: 100%;
+    padding: 10px;
+    border: none
+}
+
 .navbar {
     display: flex;
     gap: 5px;
     justify-content: space-between;
     align-items: center;
-    width: 40%;
 }
 
 .item {
@@ -71,22 +119,143 @@ header {
 
 .item a{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    gap: 2px;
+    gap: 3px;
+}
+
+.item1 span {
+    max-width: 75%;
 }
 
 .header-lower {
     padding: 10px 5px;
 }
 
-.header-lower div{
+.categories{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 5px;
     font-weight: bold;
+    padding: 10px;
 }
+
+.categories:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.header-lower > span{
+    padding: 10px;
+}
+
+.header-lower > span:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.header-lower-mobile{
+    display: none;
+}
+
+@media screen and (max-width: 990px) {
+
+    .logo-container > svg {
+        display: block;
+    }
+
+    .logo{
+        width: 70px;
+        height: 70px;
+    }
+
+    .container-search-bar{
+        display: none;
+    }
+
+    .navbar {
+        width: auto;
+        gap: 0px;
+    }
+
+    .item{
+        padding: 10px 2px;
+    }
+
+    .item svg{
+        width: 50px;
+    }
+
+    .item span{
+        display: none;
+    }
+
+    .item1 {
+        display: none;
+    }
+
+    .header-lower {
+        display: none;
+    }
+
+    .header-lower-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 7px;
+        height: 45px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .categories{
+        width: 30%;
+        max-width: 217px;
+        font-weight: 300;
+        flex-shrink: 0;
+    }
+    
+}
+
+@media screen and (min-width: 770px) and (max-width: 990px) {
+    
+    .searchBar {
+        width: 100%;
+    }
+
+    .searchBar svg{
+        left: 93%;
+    }
+
+}
+
+@media screen and (max-width: 770px) {
+    
+    .searchBar {
+        width: 100%;
+        display: none;
+    }
+
+    .searchBar svg{
+        left: 93%;
+    }
+
+    .categories{
+        width: 30%;
+        max-width: 217px;
+        font-weight: 300;
+        flex-shrink: 0;
+    }
+
+    .categories span:first-child{
+        display: none;
+    }
+
+    .categories span:last-child{
+        display: block;
+    }
+}
+ 
 
 
 
