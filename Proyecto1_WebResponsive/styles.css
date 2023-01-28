@@ -134,6 +134,7 @@ header {
 
 .item1 span {
     max-width: 75%;
+    text-overflow: ellipsis;
 }
 
 .header-lower {
@@ -248,11 +249,14 @@ header {
     
     .searchBar {
         width: 100%;
-        display: none;
     }
 
     .searchBar svg{
         left: 93%;
+    }
+
+    .categories {
+        max-width: 100px;
     }
 
     .categories span:first-child{
