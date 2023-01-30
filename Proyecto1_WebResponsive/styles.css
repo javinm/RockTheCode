@@ -4,6 +4,7 @@
     --text-color: #000;
     --free-shipment: rgb(17, 128, 0);
     --promotion: rgb(204, 77, 0);
+    --discount: rgb(191, 0, 25);
 }
 
 /* Global Styles */
@@ -57,6 +58,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    z-index: 100;
 }
 
 .header-upper {
@@ -305,6 +307,15 @@ header {
     
 }
 
+@media screen and (max-width: 525px) {
+    
+    .searchBar svg{
+        left: 87%;
+    }
+    
+}
+
+
 /* Main Styles */
 
 main {
@@ -320,7 +331,7 @@ main {
     font-weight: 700;
 }
 
-.container-promotion, .categories-prime-container, .interest-container {
+.container-promotion, .categories-prime-container, .interest-container, .compromise-container {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -336,7 +347,7 @@ main {
     position: relative;
 }
 
-.promotion, .category-prime, .interest {
+.promotion, .category-prime, .interest, .compromise {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -362,12 +373,12 @@ main {
     min-width: 50%;
 }
 
-.promotion-text, .category-prime-text {
+.promotion-text, .category-prime-text, compromise-text {
     text-align: center;
     margin-top: 10px;
 }
 
-.promotion-text h4, .category-prime-text h4 {
+.promotion-text h4, .category-prime-text h4, .compromise-text h4 {
     font-weight: 700;
 }
 
@@ -437,6 +448,68 @@ main {
     font-size: 12px;
 }
 
+.discount {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--discount);
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.interest-info {
+    max-width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;  
+    margin-top: 10px
+}
+
+.interest-info h3 {
+    word-break: break-all;
+}
+
+.interest-price {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.promotion-price {
+    color: var(--discount);
+}
+
+.promotion-price span {
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+}
+
+.promotion-price span::before {
+    content: "PVPR";
+    margin: 0 5px;
+}
+
+.interest-shipment {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--free-shipment);
+}
+
+.interest-selling {
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+}
+
+.interest-selling span{
+    font-weight: 700;;
+}
+
 .preButton, .nextButton {
     position: absolute;
     display: block;
@@ -482,51 +555,32 @@ main {
     margin: 16px 18px 16px 16px;
 }
 
-.interest-info {
-    max-width: 100%;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 5px;  
-    margin-top: 10px;
-}
-
-.interest-info h3 {
-    word-break: break-all;
-}
-
-.interest-price {
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.interest-shipment {
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--free-shipment);
-}
-
-.interest-selling {
-    font-size: 14px;
-    font-weight: 400;
-    color: black;
-}
-
-.interest-selling span{
-    font-weight: 700;;
-}
-
 @media screen and (max-width: 1200px) {
     
-    .container-promotion, .categories-prime-container {
+    .container-promotion, .categories-prime-container, .compromise-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         align-items: flex-start;
     }
 
-    .interest-container {
-        display: -webkit-inline-box;
+    .fifth {
+        flex-shrink: 5;
+    }
+
+    .fourth {
+        flex-shrink: 4;
+    }
+
+    .third {
+        flex-shrink: 3;
+    }
+
+    .second {
+        flex-shrink: 2;
+    }
+
+    .first {
+        flex-shrink: 1;
     }
 
     .info-container {
@@ -536,20 +590,31 @@ main {
 
 @media screen and (max-width: 770px) {
     
-    .container-promotion, .categories-prime-container {
+    .container-promotion, .categories-prime-container, .compromise-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: flex-start;
     }
 
-    .promotion-text h4, .category-prime-text h4 {
+    .promotion-text h4, .category-prime-text h4, .compromise-text h4 {
         font-size: 14.5px;
         font-weight: 300;
     }
 
     .interest-container {
-        display: -webkit-inline-box;
         width: 100%;
+    }
+
+    .third {
+        flex-shrink: 3;
+    }
+
+    .second {
+        flex-shrink: 2;
+    }
+
+    .first {
+        flex-shrink: 1;
     }
 
     .interest:nth-of-type(n + 4) {
@@ -559,7 +624,21 @@ main {
     .interest {
         width: 33.33%;
     }
+}
 
+@media screen and (max-width: 525px) {
+
+    .interest-container {
+        width: 100%;
+    }
+
+    .interest:nth-of-type(n + 3) {
+        display: none;
+    }
+
+    .interest {
+        width: 50%;
+    }
 }
 
 /* Footer Styles */
