@@ -5,6 +5,23 @@
     --free-shipment: rgb(17, 128, 0);
     --promotion: rgb(204, 77, 0);
     --discount: rgb(191, 0, 25);
+
+    --desktop-break: 1200px;
+    --portable-break: 990px;
+    --tablet-break: 770px;
+    --mobile-break: 525px;
+
+    --h1-font-size: 30px;
+    --h2-font-size: 23px;
+    --h3-font-size: 16px;
+    --h4-font-size: 15px;
+
+    --p-font-size: 14px;
+    --small-font-size: 12px;
+    -search-bar-font-size: 17px;
+
+    --border-radius: 5px;
+
 }
 
 /* Global Styles */
@@ -13,7 +30,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: "Roboto" sans-serif;
 }
 
 a {
@@ -34,17 +51,17 @@ img {
 }
 
 h2 {
-    font-size: 23px;
+    font-size: var(--h2-font-size);
     font-weight: 600;
 }
 
 h3 {
-    font-size: 16px;
+    font-size: var(--h3-font-size);
     font-weight: 300;
 }
 
 h4 {
-    font-size: 15px;
+    font-size: var(--h4-font-size);
     font-weight: 400;
 }
 
@@ -136,7 +153,7 @@ header {
     width: 100%;
     padding: 10px;
     border: none;
-    font-size: 17px
+    font-size: var(--search-bar-font-size);
 }
 
 .navbar {
@@ -168,7 +185,7 @@ header {
 
 .header-lower {
     padding: 10px 0;
-    font-size: 14px;
+    font-size: var(--p-font-size);
     max-height: 45px;
 }
 
@@ -397,9 +414,9 @@ main {
     background-color: white;
     color: var(--free-shipment);
     border: 1px solid var(--free-shipment);
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     padding: 5px 10px;
-    font-size: 12px;
+    font-size: var(--small-font-size);
     font-weight: 400;
 }
 
@@ -413,9 +430,9 @@ main {
     color: black;
     border: 1px solid transparent;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     padding: 5px 10px;
-    font-size: 13px;
+    font-size: var(--small-font-size);
 }
 
 .trending {
@@ -423,9 +440,9 @@ main {
     background: linear-gradient(90deg, rgb(255, 96, 0) 0%, rgb(255, 169, 13) 138.43%);
     color: white;
     border: 1px solid transparent;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     padding: 5px 10px;
-    font-size: 12px;
+    font-size: var(--small-font-size);
 }
 
 .trending p {
@@ -443,9 +460,9 @@ main {
     background-color: white;
     color: var(--promotion);
     border: 1px solid var(--promotion);
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     padding: 5px 10px;
-    font-size: 12px;
+    font-size: var(--small-font-size);
 }
 
 .discount {
@@ -455,9 +472,9 @@ main {
     background-color: var(--discount);
     color: white;
     border: 1px solid transparent;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     padding: 5px;
-    font-size: 14px;
+    font-size: var(--p-font-size);
 }
 
 .interest-info {
@@ -475,7 +492,7 @@ main {
 }
 
 .interest-price {
-    font-size: 16px;
+    font-size: var(--h4-font-size);
     font-weight: 700;
 }
 
@@ -484,7 +501,7 @@ main {
 }
 
 .promotion-price span {
-    font-size: 14px;
+    font-size: var(--p-font-size);
     font-weight: 400;
     color: black;
 }
@@ -495,13 +512,13 @@ main {
 }
 
 .interest-shipment {
-    font-size: 14px;
+    font-size: var(--p-font-size);
     font-weight: 400;
     color: var(--free-shipment);
 }
 
 .interest-selling {
-    font-size: 14px;
+    font-size: var(--p-font-size);
     font-weight: 400;
     color: black;
 }
@@ -521,7 +538,7 @@ main {
     color: black;
     border: 1px solid transparent;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     padding: 5px 10px;
     cursor: pointer;
 }
@@ -642,6 +659,17 @@ main {
 }
 
 /* Footer Styles */
+
+.footer-container {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid black;
+    font-size: var(--small-font-size);
+}
+
+
+
+
  
 
 
